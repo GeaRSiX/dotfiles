@@ -1,0 +1,117 @@
+#===============================#
+#       GeaRSiX's bashrc        
+# ~/.bashrc
+# 0 Variables
+# 1 Aliases
+#   1.A Misc
+#   1.B General
+#   1.D Programs        
+#   1.E Config Files    # DEPRECIATED - use github.com/gearsix/dotfm instead
+#   1.F Package Manager # DEPRECIATED - not using debian anymore
+# - stuff taken from default bashrc files
+#===============================#
+
+fuck-sysd.sh
+
+#export GTK_IM_MODULE=ibus
+#export XMODIFIERS=@im=ibus
+#`export QT_IM_MODULE=ibus
+
+#-------------#
+# 0 VARIABLES #
+#-------------#
+    txtReset=$'\e[0m'
+    txtBold=$'\e[1m'
+    colGreen=$'\e[0;32m'
+    colBlue=$'\e[0;34m'
+    colCyan=$'\e[0;36m'
+    export PS1='\[${txtBold}\]\A \[${txtReset}${colGreen}\]\u\[${txtReset}\]@\[${colBlue}\]\h\[${txtReset}\][\[${colCyan}\]\w\[${txtReset}\]]: '
+    export ark=~/shares/ark/
+
+#-----------#
+# 1 ALIASES #
+#-----------#
+#1.A MISC
+    alias myip='curl https://ipinfo.io/ip'
+    alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+    alias mapscii='telnet mapscii.me'
+    alias parrot.live='curl parrot.live'
+    # bunch of cmds i used when multi-monitering with my laptop
+    #alias monitor-only='enable-monitor && disable-laptop'
+    #alias laptop-only='enable-laptop && disable-monitor'
+    #alias disable-monitor='xrandr --output eDP-1 --left-of DP-1 && xrandr --output DP-1 --off'
+    #alias disable-laptop='xrandr --output DP-1 --right-of eDP-1 && xrandr --output eDP-1 --off'
+    #alias enable-monitor='xrandr --output DP-1 --right-of eDP-1 --auto'
+    #alias enable-laptop='xrandr --output eDP-1 --left-of DP-1 --auto'
+
+#1.C PROGRAM ALIASES
+    alias qbit='qbittorrent'
+
+#1.D GENERAL
+    # alias logout='pkill -KILL -u $USER'
+    alias s!!='sudo !!'
+	alias ls='ls --color=auto'
+    alias ll='ls -lha --color=auto'      # list format, human-readable
+    alias lla='ls -lAh --color=auto'     # show almost all, human-readable
+    alias lsa='ls -Ah --color=auto'      # list format, all, human-readable
+    alias llt='ls -lAht --color=auto'    # list format, show almost all, human-readable, sort by modification time (newest first)
+    alias lls='ls -lAhS --color=auto'    # list format, show almost all, human-readable, sort by file size (largest first)
+    alias llu='ls -lAhu --color=auto'    # list format, show almost all, human-readable, sort by user
+    alias rm='rm -vri'      # verbose, recursive, interactive
+    alias cp='cp -vri'      # verbose, recursive, interactive
+    alias mv='mv -vi'       # verbose, interactive
+    alias mkd='mkdir -p'    # make parent directories
+    alias grep='grep --color=auto'
+    alias ..='cd ../'
+    alias snvim='sudo nvim'
+
+#1.E CONFIG FILES
+# i just use "dotfm edit" now (see github.com/gearsix/dotfm)
+    #alias .bashrc='nvim ~/.bashrc && source ~/.bashrc'
+    #alias .nvimrc='nvim ~/.config/nvim/init.vim'
+
+#1.F PACKAGE MANAGER ALIASES
+# save typing on an old debian machine
+    #alias ainstall='sudo apt install'
+    #alias aremove='sudo apt remove'
+    #alias apurge='sudo apt purge'
+    #alias asearch='apt search'
+    #alias asearch-no='apt search --names-only'
+    #alias aupdate='sudo apt update'
+    #alias aupgrade='sudo apt upgrade'
+    #alias auu='sudo apt update && sudo apt upgrade'
+    #alias aar='sudo apt autoremove'
+
+#-----------------------------------------#
+# - STUFF TAKEN FROM DEFAULT BASHRC FILES #
+#-----------------------------------------#
+# below is taken from debian /usr/share/doc/bash/examples/startup-files 
+    # don't put duplicate lines or lines starting with space in the history.
+    HISTCONTROL=ignoreboth
+
+    # append to the history file, don't overwrite it
+    shopt -s histappend
+
+    # check the window size after each command (and if necessary) update the values of LINES and COLUMNS
+#    shopt -s checkwinsize
+
+    # if set, the pattern "**" used in a pathname expansion context will match all files and zero or more directories and subdirectories.
+    shopt -s globstar
+
+    # colored GCC warnings and errors
+    export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+
+    # add an "alert" alias for long running commands
+    # e.g.$ sleep 10; alert
+    alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+    # enable programmable completion features
+    # don't need to enable this if it's already enabled in /etc/bash.bashrc and /etc/profile sources /etc/bash.bashrc)
+    if ! shopt -oq posix; then
+      if [ -f /usr/share/bash-completion/bash_completion ]; then
+        . /usr/share/bash-completion/bash_completion
+      elif [ -f /etc/bash_completion ]; then
+        . /etc/bash_completion
+      fi
+    fi
+

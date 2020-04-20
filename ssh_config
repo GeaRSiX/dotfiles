@@ -1,0 +1,4 @@
+Host ark
+    User gearsix
+    HostName 192.168.0.14
+    Port 3001

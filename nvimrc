@@ -1,0 +1,82 @@
+"========================
+" Alex Collins                 
+" ~/.config/nvim/init.vim
+" 0. VIM-PLUG
+" 0-1. VIM-PLUG SHORTCUTS
+" 1. GENERAL
+" 2. COLOURS
+" 3. SPACES & TABS
+" 4. UI
+" 5. SEARCH	
+" 6. FOLDING
+" 7. SHORTCUTS
+"========================
+
+"0. VIM-PLUG
+    call plug#begin('~/.local/share/nvim/plugged')
+"        Plug 'airodactyl/neovim-ranger' "use ranger for file explorer
+        Plug 'vim-utils/vim-man'
+        Plug 'w0rp/ale'
+		Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+    call plug#end()
+
+"0-1. VIM-PLUG SETTINGS
+	let g:ale_linters = {'javascript': ['standard']}
+	let g:ale_fixers = {'javascript': ['standard']}
+
+"1. GENERAL
+	set history=500			"how many lines of history to remember
+	set autoread			"read a file if it's changed from the outside
+	set ffs=unix,dos,mac	"filetype priority
+
+"2. COLOURS
+	syntax enable
+	set background=dark
+
+"3. SPACES & TABS
+	set tabstop=4		"number of visual spaces per tab
+	set softtabstop=4	"number of spaces in a tab when editing
+	set shiftwidth=4	"number of spaces when shifting a visual block
+	set hid				"hide ignored buffers
+	"set expandtab		"tabs to spaces
+
+"4. UI
+	set number			"show numbers on in the margin
+	set showcmd			"show cmdline in the bottom bar
+	set cmdheight=2		"height of cmdline
+	set cursorline		"highlight current line
+	set wildmenu		"visual autocomplete for cmd menu
+	set showmatch		"highlight matching [{()}]
+	set nowrap			"turn off line wrapping
+	set laststatus=2	"always show the last status line
+	"set statusline=\ %F%m%r%h\ %w\ \ \ \ \ \ \ \ \ \ \ \ Line:\ %l
+  set scrolloff=1     "always show at least one line above/below the cursor
+
+"5. SEARCH
+	set incsearch		"search as characters are entered
+	set hlsearch		"highlight matches
+
+"6. FOLDING
+	set foldmethod=indent	  "fold based on syntax
+	set foldenable			  "enable folding
+	set foldnestmax=6		  "avoids massively nested folds
+
+"7. TEXT WRAPPING
+	set wrap		"enable text wrapping
+	set linebreak	"only insert linebreaks when Enter key is pressed
+
+"8. SHORTCUTS
+	", = leader
+	let mapleader=","
+	",<space> = turn off search highlights
+	nnoremap <leader><space> :nohlsearch<CR>
+	":W = sudo save
+	command W w !sudo tee % > /dev/null
+	"<Esc> to exit terminal mode
+	:tnoremap <Esc> <C-\><C-n>
+  "vertical res
+  cnoreabbrev vres vertical res
+
+"8. PLUGINS
+set rtp+=/home/alex/go/src/golang.org/x/lint/misc/vim
+

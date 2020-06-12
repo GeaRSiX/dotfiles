@@ -11,12 +11,6 @@
 # - stuff taken from default bashrc files
 #===============================#
 
-fuck-sysd.sh
-
-#export GTK_IM_MODULE=ibus
-#export XMODIFIERS=@im=ibus
-#`export QT_IM_MODULE=ibus
-
 #-------------#
 # 0 VARIABLES #
 #-------------#

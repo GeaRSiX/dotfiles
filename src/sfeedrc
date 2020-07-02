@@ -1,0 +1,18 @@
+# list of feeds to fetch:
+feeds() {
+	# feed <name> <feedurl> [basesiteurl] [encoding]
+	# dev
+	feed "gearsix-dotfiles" "https://git.gearsix.net/scripts/atom.xml"
+	feed "gearsix-scripts" "https://git.gearsix.net/scripts/atom.xml"
+	feed "gearsix-dotfm" "https://git.gearsix.net/dotfm/atom.xml"
+	feed "codemadness" "https://www.codemadness.nl/atom.xml"
+	# tech
+	feed "golang-youtube" "https://www.youtube.com/feeds/videos.xml?channel_id=UCO3LEtymiLrgvpb59cNsb8A"
+	feed "golang-releases" "https://github.com/golang/go/releases.atom"
+	feed "linux kernel" "https://www.kernel.org/feeds/kdist.xml" "https://www.kernel.org"
+	feed "openbsd" "https://old.reddit.com/r/openbsd/atom.rss"
+	# funny
+	feed "explosm" "http://feeds.feedburner.com/Explosm"
+	feed "xkcd" "https://xkcd.com/atom.xml" "https://xkcd.com"
+	# get youtube Atom feed: curl -s -L 'https://www.youtube.com/user/gocoding/videos' | sfeed_web | cut -f 1
+}

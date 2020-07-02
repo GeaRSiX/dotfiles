@@ -11,6 +11,8 @@
 # - stuff taken from default bashrc files
 #===============================#
 
+fuck-sysd.sh
+
 #-------------#
 # 0 VARIABLES #
 #-------------#
@@ -42,6 +44,7 @@
 
 #1.C PROGRAM ALIASES
 	alias qbit='qbittorrent'
+	alias gitn='git --no-pager' # ??? if i want a pager i'll pipe it to less
 
 #1.D GENERAL
 	# alias logout='pkill -KILL -u $USER'

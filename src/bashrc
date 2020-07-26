@@ -11,8 +11,6 @@
 # - stuff taken from default bashrc files
 #===============================#
 
-fuck-sysd.sh
-
 #-------------#
 # 0 VARIABLES #
 #-------------#
@@ -23,8 +21,9 @@ fuck-sysd.sh
 	colCyan=$'\e[0;36m'
 	export PS1='\[${txtBold}\]\A \[${txtReset}${colGreen}\]\u\[${txtReset}\]@\[${colBlue}\]\h\[${txtReset}\][\[${colCyan}\]\w\[${txtReset}\]]: '
 	export ark=~/shares/ark/
-	export CC=musl-gcc
-	export MANWIDTH=72
+	export CC=gcc
+	export PATH=$PATH:~/bin
+	export MANWIDTH=75
 
 #-----------#
 # 1 ALIASES #

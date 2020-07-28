@@ -44,6 +44,7 @@
 #1.C PROGRAM ALIASES
 	alias qbit='qbittorrent'
 	alias gitn='git --no-pager' # ??? if i want a pager i'll pipe it to less
+	alias xopen='xdg-open'
 
 #1.D GENERAL
 	# alias logout='pkill -KILL -u $USER'

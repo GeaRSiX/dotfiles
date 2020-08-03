@@ -1,4 +1,9 @@
 Host ark
     User gearsix
-    HostName 192.168.0.14
+    HostName 192.168.0.2
     Port 3001
+
+Host git.gearsix
+	User dietpi
+	HostName 192.168.0.20
+

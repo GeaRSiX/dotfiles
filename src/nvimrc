@@ -54,7 +54,7 @@
   " highlight text over colwidth
   augroup vimrc_autocmds
     autocmd BufEnter * highlight OverLength ctermbg=darkgrey guibg=#592929
-    autocmd BufEnter * match OverLength /\%74v.*/
+    autocmd BufEnter * match OverLength /\%80v.*/
   augroup END
 
 "5. SEARCH

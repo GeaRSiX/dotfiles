@@ -53,7 +53,7 @@
   set scrolloff=1     "always show at least one line above/below the cursor
   " highlight text over colwidth
   augroup vimrc_autocmds
-    autocmd BufEnter * highlight OverLength ctermbg=darkgrey guibg=#592929
+    autocmd BufEnter * highlight OverLength ctermbg=grey guibg=#592929
     autocmd BufEnter * match OverLength /\%80v.*/
   augroup END
 

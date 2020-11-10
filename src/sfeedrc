@@ -2,16 +2,14 @@
 feeds() {
 	# feed <name> <feedurl> [basesiteurl] [encoding]
 	# dev
-	feed "gearsix-dotfiles" "https://git.gearsix.net/scripts/atom.xml"
-	feed "gearsix-scripts" "https://git.gearsix.net/scripts/atom.xml"
+	feed "gearsix-dotfiles" "https://git.gearsix.net/g6dotfiles/atom.xml"
+	feed "gearsix-scripts" "https://git.gearsix.net/g6scripts/atom.xml"
 	feed "gearsix-dotfm" "https://git.gearsix.net/dotfm/atom.xml"
 	feed "codemadness" "https://www.codemadness.nl/atom.xml"
-	feed "Shining Rock Software" "http://www.shiningrocksoftware.com/feed/rss"
+	feed "Shining Rock Software" "http://www.shiningrocksoftware.com/feed/"
 	# tech
-	feed "golang-youtube" "https://www.youtube.com/feeds/videos.xml?channel_id=UCO3LEtymiLrgvpb59cNsb8A"
-	feed "golang-releases" "https://github.com/golang/go/releases.atom"
+	feed "golang" "https://blog.golang.org/feed.atom"
 	feed "linux kernel" "https://www.kernel.org/feeds/kdist.xml" "https://www.kernel.org"
-	feed "openbsd" "https://old.reddit.com/r/openbsd/atom.rss"
 	feed "nodejs releases" "https://nodejs.org/en/feed/releases.xml"
 	# funny
 	feed "explosm" "http://feeds.feedburner.com/Explosm"

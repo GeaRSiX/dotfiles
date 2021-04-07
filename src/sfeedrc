@@ -16,4 +16,7 @@ feeds() {
 	feed "explosm" "http://feeds.feedburner.com/Explosm"
 	feed "xkcd" "https://xkcd.com/atom.xml" "https://xkcd.com"
 	# get youtube Atom feed: curl -s -L 'https://www.youtube.com/user/gocoding/videos' | sfeed_web | cut -f 1
+	# misc
+	feed "dictionary of obscure sorrows" "https://www.dictionaryofobscuresorrows.com/rss"
+	feed "gog games" "https://gog-games.com/rss"
 }

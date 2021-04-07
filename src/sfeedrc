@@ -11,6 +11,7 @@ feeds() {
 	feed "golang" "https://blog.golang.org/feed.atom"
 	feed "linux kernel" "https://www.kernel.org/feeds/kdist.xml" "https://www.kernel.org"
 	feed "nodejs releases" "https://nodejs.org/en/feed/releases.xml"
+	feed "opensuse" "https://news.opensuse.org/feed.xml"
 	# funny
 	feed "explosm" "http://feeds.feedburner.com/Explosm"
 	feed "xkcd" "https://xkcd.com/atom.xml" "https://xkcd.com"
